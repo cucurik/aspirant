@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>7</title>
+  <style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">7</h1>
+</header>
+<h1 id="нейромережеві-методи-розвязання-задач-компютерного-зору">Нейромережеві
+методи розв’язання задач комп’ютерного зору</h1>
+<h2 id="вступ">1. Вступ</h2>
+<p>Комп’ютерний зір — це галузь штучного інтелекту, що займається
+автоматичним отриманням, аналізом та інтерпретацією зображень і
+відео.<br />
+Нейромережеві методи дозволяють будувати системи, здатні самостійно
+виділяти ознаки, класифікувати об’єкти та приймати рішення.</p>
+<hr />
+<h2 id="базові-поняття">2. Базові поняття</h2>
+<ul>
+<li><strong>Ознака (feature)</strong> — числова характеристика
+зображення (колір, текстура, форма).<br />
+</li>
+<li><strong>Піксель</strong> — елементарний носій інформації.<br />
+</li>
+<li><strong>Нейронна мережа</strong> — модель, що складається з шарів
+штучних нейронів, які виконують перетворення даних.</li>
+</ul>
+<hr />
+<h2 id="архітектури-нейронних-мереж-у-компютерному-зорі">3. Архітектури
+нейронних мереж у комп’ютерному зорі</h2>
+<h3 id="перцептрон-і-багатошарові-мережі-mlp">3.1. Перцептрон і
+багатошарові мережі (MLP)</h3>
+<ul>
+<li>Використовуються для простих задач класифікації.<br />
+</li>
+<li>Основне обмеження: відсутність просторової інваріантності.</li>
+</ul>
+<h3 id="згорткові-нейронні-мережі-cnn">3.2. Згорткові нейронні мережі
+(CNN)</h3>
+<ul>
+<li>Використовують згорткові операції для виділення просторових
+ознак.<br />
+</li>
+<li>Основні елементи:
+<ul>
+<li><strong>Згортка (convolution):</strong><br />
+$ (I * K)(x, y) = _m _n I(x+m, y+n)K(m, n) $</li>
+<li><strong>ReLU:</strong> $ f(x) = (0, x) $</li>
+<li><strong>Pooling (максимальний/середній):</strong> зменшення
+розмірності зображення.<br />
+</li>
+</ul></li>
+<li>Приклади архітектур: LeNet, AlexNet, VGG, ResNet.</li>
+</ul>
+<h3 id="рекурентні-мережі-rnn-lstm-gru">3.3. Рекурентні мережі (RNN,
+LSTM, GRU)</h3>
+<ul>
+<li>Використовуються для аналізу відео (послідовності кадрів).<br />
+</li>
+<li>Дозволяють враховувати часову залежність.</li>
+</ul>
+<h3 id="трансформери-у-компютерному-зорі">3.4. Трансформери у
+комп’ютерному зорі</h3>
+<ul>
+<li><strong>Vision Transformer (ViT):</strong> розбиває зображення на
+патчі та обробляє їх як послідовність.<br />
+</li>
+<li>Використовує механізм <strong>self-attention</strong>:<br />
+$ (Q, K, V) = ()V $</li>
+</ul>
+<hr />
+<h2 id="основні-задачі-компютерного-зору-та-методи-їх-розвязання">4.
+Основні задачі комп’ютерного зору та методи їх розв’язання</h2>
+<h3 id="класифікація-зображень">4.1. Класифікація зображень</h3>
+<ul>
+<li>Мета: визначити клас зображення.<br />
+</li>
+<li>Приклади: CNN, ResNet, EfficientNet.</li>
+</ul>
+<h3 id="детекція-обєктів">4.2. Детекція об’єктів</h3>
+<ul>
+<li>Визначення об’єктів та їх координат (bounding box).<br />
+</li>
+<li>Архітектури: R-CNN, Fast R-CNN, Faster R-CNN, YOLO, SSD.</li>
+</ul>
+<h3 id="сегментація-зображень">4.3. Сегментація зображень</h3>
+<ul>
+<li><strong>Семантична сегментація:</strong> кожен піксель належить
+певному класу.<br />
+</li>
+<li><strong>Інстанс-сегментація:</strong> розділення об’єктів одного
+класу.<br />
+</li>
+<li>Приклади архітектур: U-Net, Mask R-CNN.</li>
+</ul>
+<h3 id="генерація-зображень">4.4. Генерація зображень</h3>
+<ul>
+<li>Використання GAN (Generative Adversarial Networks) та дифузійних
+моделей.<br />
+</li>
+<li>Формулювання GAN:<br />
+$ <em>G <em>D V(D, G) = </em>{x p</em>{data}}[D(x)] + _{z p_z}[(1 -
+D(G(z)))] $</li>
+</ul>
+<hr />
+<h2 id="переваги-та-обмеження">5. Переваги та обмеження</h2>
+<p><strong>Переваги:</strong> - Висока точність у складних
+задачах.<br />
+- Автоматичне виділення ознак.<br />
+- Гнучкість у застосуванні.</p>
+<p><strong>Обмеження:</strong> - Потреба у великих обсягах даних.<br />
+- Висока обчислювальна складність.<br />
+- Погана інтерпретованість результатів.</p>
+<hr />
+<h2 id="висновки">6. Висновки</h2>
+<p>Нейромережеві методи стали основою сучасного комп’ютерного зору. Від
+CNN до трансформерів — розвиток моделей дозволяє вирішувати широкий
+спектр задач: від класифікації зображень до генерації нових даних.
+Подальші дослідження спрямовані на підвищення ефективності та
+інтерпретованості моделей.</p>
+</body>
+</html>
